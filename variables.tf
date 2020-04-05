@@ -28,7 +28,6 @@ variable "nat_instance_type" {
   default     = ""
 }
 
-
 variable "nat_instance_volume_type" {
   description = "Volume type for Nat Instance"
   type        = string

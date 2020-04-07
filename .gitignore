@@ -1,0 +1,8 @@
+.terraform
+terraform.tfstate
+*.tfstate*
+terraform.tfvars
+
+# IDEA setting files
+.idea/
+terraform-aws-vpc.iml

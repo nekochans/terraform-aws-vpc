@@ -9,6 +9,7 @@ Creates the following resources:
 - Route table
 - Internet Gateway
 - Network ACL
+- VPC Flow Log
 
 ## Usage
 

@@ -1,5 +1,5 @@
 # terraform-aws-vpc
-Terraform module to create VPC resource on AWS.
+Terraform module to create VPC resource with Nat Instance on AWS.
 
 Creates the following resources:
 
@@ -38,26 +38,31 @@ module "vpc" {
 | terraform | ~> 0.12.24 |
 | aws | ~> 2.56 |
 
+## Providers
 
-## Input
+| Name | Version |
+|------|---------|
+| aws | ~> 2.56 |
+
+## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| name | Name to be used on all the resources as identifier | `string` | `""` | no |
-| env | The target environment | `string` | `""` | no |
+| azs | A list of availability zones names or ids in the region | `list(string)` | `[]` | no |
 | cidr | The CIDR block for the VPC. Default value is a valid CIDR, but not acceptable by AWS and should be overridden | `string` | `"0.0.0.0/0"` | no |
+| env | The target environment | `string` | `""` | no |
+| name | Name to be used on all the resources as identifier | `string` | `""` | no |
 | nat\_instance\_ami | Amazon Machine Image (AMI) for NAT Instance | `string` | `""` | no |
 | nat\_instance\_type | Instance type for NAT Instance | `string` | `""` | no |
-| nat\_instance\_volume\_type | Volume type for Nat Instance | `string` | `""` | no |
 | nat\_instance\_volume\_size | Volume size for Nat Instance | `string` | `""` | no |
-| azs | A list of availability zones names or ids in the region | `list(string)` | `[]` | no |
-| public\_subnets | A list of public subnets inside the VPC | `list(string)` | `[]` | no |
+| nat\_instance\_volume\_type | Volume type for Nat Instance | `string` | `""` | no |
 | private\_subnets | A list of private subnets inside the VPC | `list(string)` | `[]` | no |
+| public\_subnets | A list of public subnets inside the VPC | `list(string)` | `[]` | no |
 
-## Output
+## Outputs
 
 | Name | Description |
 |------|-------------|
-| vpc\_id | The ID of the VPC |
-| subnet\_public\_ids | List of IDs of public subnets |
 | subnet\_private\_ids | List of IDs of private subnets |
+| subnet\_public\_ids | List of IDs of public subnets |
+| vpc\_id | The ID of the VPC |

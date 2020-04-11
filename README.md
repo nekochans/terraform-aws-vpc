@@ -31,6 +31,10 @@ module "vpc" {
 }
 ```
 
+## Examples
+
+* [complete](https://github.com/nekochans/terraform-aws-vpc/tree/master/examples/complete)
+
 ## Requirements
 
 | Name | Version |
@@ -66,3 +70,11 @@ module "vpc" {
 | subnet\_private\_ids | List of IDs of private subnets |
 | subnet\_public\_ids | List of IDs of public subnets |
 | vpc\_id | The ID of the VPC |
+
+## Authors
+
+Module managed by [nekochans](https://github.com/nekochans).
+
+## License
+
+MIT Licensed. See LICENSE for full details.

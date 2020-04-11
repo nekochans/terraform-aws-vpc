@@ -12,7 +12,7 @@ module "vpc" {
   cidr = "10.10.0.0/16"
 
   nat_instance_ami         = "ami-0af1df87db7b650f4"
-  cidrnat_instance_type    = "t2.micro"
+  nat_instance_type        = "t2.micro"
   nat_instance_volume_type = "gp2"
   nat_instance_volume_size = "30"
 

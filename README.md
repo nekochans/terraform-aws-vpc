@@ -39,7 +39,7 @@ module "vpc" {
 
 | Name | Version |
 |------|---------|
-| terraform | >= 0.13.0, < 0.14 |
+| terraform | >= 0.14.0, < 0.15 |
 | aws | ~> 2.56 |
 
 ## Providers
